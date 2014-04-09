@@ -1,0 +1,199 @@
+                              RUNNING POINTS
+                              --------------
+
+                                  by the 
+                             Cook Soft Company
+
+
+                               Programming:
+                               Michael Koch
+
+
+
+
+Das Spiel :
+-----------
+Running Points ist eine (Ja! Noch eine!) Tron-Variante, die aber einige
+neue Features bietet, deren da sind :
+      - Drei Spieler gleichzeitig
+      - Bomben und Sprenger
+      - Extras
+      - Einstellbare Computergegner
+      - Levels im Eigenbau
+
+Running Points ist Public Domain, d.h. (fr die, die es bisher noch nicht 
+wuten) das Programm darf und soll beliebig kopiert und weitergegeben 
+werden, solange alle Files mitkopiert werden und keines ver„ndert wird.
+Eine kommerzielle Nutzung ist verboten.
+Das Programm ist vollst„ndig in OMIKRON-Basic V3.00 geschrieben.
+
+Das Menuesystem :
+-----------------
+Um einen Menuepunkt anzuw„hlen klicken sie einfach mit dem Mauspfeil 
+irgendwo in das Rechteck das den Menuepunkt umrandet. Die Menuepunkte 
+erkl„ren sich weitgehend durch die Namen, deshalb wird jetzt erst einmal 
+der Spielverlauf erkl„rt und dann ein paar Optionen, bei denen es noch Fra-
+gen geben k”nnte.
+
+Wenn sie einmal versehentlich "Neues Spiel" anklicken sollten, drcken sie 
+bei der Namenseingabe einfach Return.
+
+Der Spielverlauf :
+------------------
+Oberstes Gebot : Fahren sie nie auf einen schwarzen Punkt, das ist t”dlich!
+Sie steuern im Spiel einen Punkt, der durch seine st„ndige Bewegung eine 
+Linie hinterl„t. Im Laufe der Zeit wird es immer schwieriger diesen Linien 
+auszuweichen, und frher oder besser sp„ter sind sie Tod. Gewonnen hat der 
+Spieler, der am l„ngsten berlebt. Soviel zum Grund-Spielprinzip.
+
+Die Steuerung:
+Wenn ein Spieler allein spielt, kann er wahlweise mit der Tastatur oder mit 
+dem Joystick in Port 1 spielen. ACHTUNG! Er steuert in beiden F„llen den 
+Punkt der mit 3 markiert ist.
+Wird zu zweit gespielt, bernimmt Spieler 1 auch Punkt 1, Spieler 2 nimmt 
+Punkt 3. Spieler 1 kann wieder wahlweise mit Tastatur oder Joystick 
+spielen, Spieler 2 mu mit der Tastatur spielen.
+Bei drei Spielern steuern Spieler 1 und 2 mit der Tastatur, Spieler 3 
+bernimmt den Joystick.
+
+Die Tastaturbelegung:
+Spieler 1:
+
+                                   oben
+                                     t
+                                     |
+                            links  f- -h  rechts 
+                                     |
+                                     v
+                                   unten
+
+                                 g  Bomben
+                                r  Sprenger
+                       c  Geschwindigkeit umschalten
+
+Spieler 2:
+
+                                   oben
+                                     8
+                                     |
+                            links  4- -6  rechts
+                                     |
+                                     2
+                                   unten
+
+                                 5  Bomben
+                                7  Sprenger
+                       0  Geschwindigkeit umschalten
+
+
+Die Joystickbelegung:
+  Der Joystick wird in Port 1 (rechts vom Mausport) angeschlossen. 
+  Die Richtungs„nderungen erfolgen wie sie es gewohnt sind.
+
+Feuer + links   Bomben
+Feuer + rechts  Sprenger
+Feuer + oben    Geschwindigkeit umschalten
+
+Dabei ist zu beachten, da man zuerst Feuer h„lt, dann in die entsprechen-
+de Richtung lenkt und erst danach Feuer wieder losl„t, da man sonst die 
+Fahrtrichung „ndert.
+
+
+Die Statuszeile:
+In der Statuszeile k”nnen sie die gespielte Zeit und ihren aktuellen Vorrat 
+an Bomben und Sprengern ablesen. Dabei steht "B" fr Bomben und "S" fr 
+Sprenger.
+
+Die Bomben:
+Bomben explodieren einige Zeit nachdem man sie geworfen hat und hinterlas-
+sen einen groen schwarzen Fleck an der Stelle, an der sie gezndet wurden.
+Sie haben nur einen begrenzten Vorrat an Bomben, teilen sie sich ihn gut 
+ein. Solange eine Bombe noch nicht explodiert ist, k”nnen sie keine zweite 
+aktivieren.
+
+Die Sprenger:
+Sprenger sind das geeignete Mittel, um durch W„nde zu gehen. Sie explodier-
+en schon nach krzerer Zeit als Bomben und zerst”ren dabei alle schwarzen 
+Stellen, die sich in dem Explosionsumkreis befinden. Auch hier gilt: 
+solange ein Sprenger nicht explodiert ist, k”nnen sie keinen zweiten 
+aktivieren.
+
+Geschwindigkeit:
+Sie k”nnen zwischen zwei verschiedenen Geschwindigkeiten umschalten. Durch 
+eine gr”ere Geschwindigkeit holen sie zwar leichter ihre Gegner ein oder 
+h„ngen sie ab, allerdings fahren sie auch leichter gegen ein Hindernis.
+Es gibt ein Extra, das den Spieler stark beschleunigt. Durch die "Geschwin-
+digkeit umschalten"-Taste k”nnen sie die Geschwindigkeit wieder herunter-
+schalten.
+
+Extras:
+Die Extras erh”hen den Spielspa um ein betr„chtliches. Um ein Extra auf-
+zusammeln mssen sie auf den Punkt oben links fahren, auf den auch der 
+Pfeil deutet. Eine Kollision mit einem anderen Teil eines Extras ist t”d-
+lich. Welche Auswirkung das Extra hat, ist zuf„llig. Es gibt 11 verschie-
+dene M”glichkeiten. Einige sind gut fr sie, manche sind schlecht fr den 
+Gegner und fr andere trifft beides zu. Welche verschiedenen Extras es 
+gibt wird hier nicht beschrieben, probieren sie es einfach aus.
+
+
+Das ist eigentlich as ganze Spiel. Nun kommen noch Erkl„rungen zu einigen 
+Menuepunkten.
+
+Level editieren:
+----------------
+  Hintergrund laden:
+    L„dt ein Schwarz-Weiss-Bild als Hintergrundgrafik fr das Spiel. Das 
+    Bild mu im Doodle-Format abgespeichert sein. Es kann in einem belie-
+    bigen Pfad sein.
+
+  Extras setzen:
+    Sie k”nnen in einem Level bis zu 20 Extras setzen. Achten sie darauf, 
+    das kein Extra den Punkt eines anderen Extras verdeckt, da sie es sonst 
+    nicht aufsammeln k”nnen. Mit dem rechten Mausknopf kehren sie zum Menue 
+    zurck.
+
+  Extras l”schen:
+    Ziehen sie durch halten des Mausknopfes und bewegen der Maus ein Recht-
+    eck ber die Extras, die sie l”schen wollen. Alle Extras, deren Punkt 
+    im Bereich des Rechtecks liegen, werden gel”scht. Drcken sie den 
+    rechten Mausknopf um zum Menue zurckzukehren.
+    
+  Reset:
+    L”scht den Hintergrund und die Extras und setzt die Starts wieder auf 
+    die ursprnglichen Werte.
+
+  Speichern:
+    Speichert die Informationen ber das Level. Die Extention von Levels 
+    ist "LEV". Von dem Hintergrundbild wird nur der Name und der Pfadname 
+    abgespeichert, d.h. das Bild mu sich auf der selben Diskette, nicht 
+    aber im selben Ordner wie der Level befinden.
+
+
+Computergegner:
+---------------
+  Richtungswechsel:
+    Mit dieser Option stellen sie ein, wie oft die Computergegner die Rich-
+    tung „ndern. Dabei bedeutet 1 die niedrigste, 59 die h”chste Anzahl der
+    Richtungs„nderungen.
+
+  Computer spielt neutral/defensiv/offensiv:
+    Steht die Einstellung auf neutral wird bei einem Richtungswechsel die 
+    neue Richtung zuf„llig bestimmt. Steht die Einstellung auf offensiv 
+    f„hrt der Computer bei jedem Richtungswechsel in Richtung des n„chstge-
+    legenen Gegners, bei defensiv geschieht das umgekehrte.
+    Je h”her sie den Richtungswechsel eingestellt haben, desto mehr wirkt 
+    die Einstellung dieser Option (versuchen sie einmal die Einstellung 
+    offensiv und 59).
+
+
+jetzt sollten sie in der Lage sein, das Spiel bis zur Perfektion zu beherr-
+schen. Es wird einige Zeit brauchen bis sie die Steuerung beherrschen. 
+Geben sie nicht zu frh auf.
+
+Ich erwarte kein Geld fr mein Spiel, aber wenn sie mir dennoch wegen 
+irgendetwas schreiben wollen, hier meine Adresse:
+
+Michael Koch
+Waldbachstr. 12
+5430 Montabaur 1
+

@@ -1,0 +1,500 @@
+
+
+                                C S C presents
+
+
+                                   PLANMAKER
+                                   ---------
+
+
+
+                Das ultimative Werkzeug fr alle Rollenspieler
+
+
+
+
+                              Idee und Programm : 
+
+                                 Michael Koch
+
+
+
+
+
+
+šber Den Planmaker :
+--------------------
+Der Planmaker ist Public Domain, d. h. er darf und soll beliebig oft kopiert 
+und weitergegeben werden, solange alle Programmfiles mitkopiert werden. 
+Lediglich die kommerzielle Nutzung ist verboten.
+Das Programm wurde von mir eigentlich dazu entwickelt, um neue HERO QUEST-
+Spielpl„ne zu entwerfen, da mit der Zeit die M”glichkeiten des Orginalspiel-
+plans ausgereizt waren. W„hrend des Programmierens wurde mir aber bewut, da 
+damit lange nicht alle M”glichkeiten des Programms erfat sind. Man k”nnte
+sich zum Beispiel durch die individuellen Gestaltungsm”glichkeiten der Boden-
+platten Untergrnde fr Schlachten nach den Warhammer Fantasy Battle-Regeln 
+drucken. Auch damit sind die M”glichkeiten noch nicht ausgesch”pft, ber Zu-
+schriften mit neuen Ideen und Verbesserungsvorschl„gen oder Kritik wrde ich 
+mich freuen.
+Doch nun zur Bedienung des vollst„ndig in OMIKRON-Basic V3.00 geschriebenen
+Programms.
+
+
+Software :
+----------
+Auf der Diskette mu vorhanden sein : Ordner    "PLANMAKE.R"
+   Im Ordner "PLANMAKE.R"           : Programm  "PLANMAKE.BAS"
+   Im   "         "                 : Ordner    "DATAS"
+   Im   "    "DATAS"                : Ordner    "PRGDATAS"
+   Im   "    "PRGDATAS"             : File      "PLANMAKE.RSC"
+   Im   "         "                 : File      "PLANMUCH.RSC"
+   Im   "         "                 : File      "PLANMUP.RSC"
+   Im   "         "                 : File      "PLANMAKE.TXT"
+
+Der Ordner "PRGDATAS" enth„lt Files, die vom Planmaker geladen werden. Diese 
+mssen unbedingt alle vorhanden sein. 
+Der Ordner "DATAS" enth„lt normalerweise ihre Chars und Spielpl„ne, sie 
+k”nnen sie aber auch an anderen Stellen abspeichern.
+
+
+Allgemeines :
+-------------
+Der Planmaker hat eine Routine eingebaut, die bei Fehlern bei der Ausfhrung 
+angesprungen wird. Es erscheint eine Alertbox mit den Optionen "Neuversuch",
+"Weiter" und "Ende". W„hlt man "Neuversuch" an wird versucht den Befehl bei dem 
+der Fehler auftrat noch einmal auszufhren. "Weiter" f„hrt beim n„chsten Befehl 
+fort. "Ende" bricht das Programm ab. ACHTUNG! Ihre Chars und Pl„ne werden bei 
+einem Programmabbruch unwiderbringlich gel”scht, sofern sie diese nicht gespei-
+chert haben, also Vorsicht. Falls ein Fehler in einer Schleife auftreten 
+sollte wird die Routine bei jedem Durchlauf wieder angesprungen, deshalb mssen 
+sie gegebenenfalls mehrfach auf weiter klicken.
+
+Bei Eingaben ber die Tastatur kann diese grunds„tzlich durch Eingabe von "E" 
+abgebrochen werden, es sei denn es ist anders angegeben.
+
+
+Das Hauptmenue :
+----------------
+Desk :
+  Planmaker Info : 
+    Zeigt, wie sie sicher schon gemerkt haben, die Anleitung.
+
+  Chars :
+    ~ editieren : 
+      Ruft den Editor fr die Chars auf. N„heres folgt sp„ter in der Anlei-
+      tung.
+
+    ~ zeigen : 
+      Zeigt die Chars an. Links steht die Bank an, die gerade dargestellt
+      wird, rechts drei Auswahlm”glichkeiten. "Weiter" zeigt die n„chste
+      Bank an, "Zurck" springt eine Bank zurck. "Ende" bringt sie zurck
+      zum Hauptmenue. Fr Chars stehen drei Speicherb„nke zur Verfgung.
+
+    ~ l”schen : 
+      bietet die M”glichkeit, ganze Speicherb„nke zu l”schen. "Weiter" und 
+      "Ende" haben den gleichen Effekt wie bei "Char zeigen". Wenn sie "L”-
+      schen" anklicken wird dieser Menuepunkt invertiert. Klicken sie das Feld
+      noch einmal an und die angezeigte Speicherbank wird gel”scht.
+
+
+  Plan :
+    ~ editieren : 
+      Ruft den Spielplaneditor auf. N„heres sp„ter.
+
+    ~ zeigen : 
+      Zeigt eine šbersicht der Spielpl„ne. Bedienung wie bei "Chars zeigen". 
+      Fr Spielpl„ne stehen die Speicherb„nke 4-8 zur Verfgung.
+
+    ~ l”schen : 
+      Bietet die M”glichkeit, eine Speicherbank fr einen Spielplan zu l”schen.
+      Bedienung wie bei "Chars l”schen".
+
+
+  Disk : 
+    Chars laden : 
+      Wenn sie Chars laden wollen, klicken sie so lange auf "Weiter" bis die
+      Speicherbank angezeigt wird. Klicken sie dann einmal auf "Laden". Der
+      Text wird jetzt invertiert dargestellt. Sie k”nnen noch weitere Speicher-
+      b„nke anw„hlen. Wenn sie jetzt auf "Ende" klicken, wird eine Fileselect-
+      box angezeigt und sie k”nnen die Speicherb„nke aussuchen die sie vorher
+      invertiert haben. Danach kehren sie zum Hauptmenue zurck. 
+
+    Chars speichern : 
+      Bedienung wie bei "Chars laden"
+
+    Plan laden : 
+      Bedienung wie bei "Chars laden"
+
+    Plan speichern : 
+      Bedienung wie bei "Chars laden"
+
+    Speicherplatz : 
+      Zeigt den freien Speicherplatz auf der Diskette. Bei der Frage nach dem 
+      Laufwerk geben sie die Laufwerkskennung ein ("A" oder "B"). Das Programm
+      geht davon aus, da sie doppelseitig formatierte Disketten benutzen, 
+      also wundern sie sich nicht wenn sie falsche Angaben beim belegten Spei-
+      cherplatz bekommen, wenn sie anders formatierte Disketten benutzen.
+      Generell funktionieren diese aber genauso.
+
+    File l”schen : 
+      Beim ersten Aufruf dieser Funktion erscheint eine Alertbox, die sie 
+      fragt, ob eine Sicherheitsabfrage vor dem L”schen gewnscht ist. W„hlen 
+      sie "Ja" oder "Nein" an, je nachdem was ihnen lieber ist. W„hlen sie dann 
+      das File an, das sie l”schen wollen. Haben sie beim ersten Aufruf "Ja" 
+      gew„hlt, erscheint jetzt eine Alertbox die noch einmal nachfragt ob sie 
+      das File wirklich l”schen wollen. 
+      Um zum Hauptmenue zurckzugelangen klicken sie in der Fileselectbox auf 
+      "Abbruch".
+
+
+  Drucken :
+    Spielplan drucken : 
+      W„hlen sie mit "Weiter" und "Zurck" den Spielplan an den sie drucken wol-
+      len und klicken sie auf "Ende". Falls sie den falschen Plan gew„hlt haben,
+      drcken sie den rechten Mausknopf um zum Hauptmenue zu kommen. Gehen sie 
+      jetzt mit der Maus auf den obersten linken Char den sie drucken wollen, 
+      drcken und halten sie den linken Mausknopf und bewegen sie die Maus zum 
+      untersten rechten Char, den sie drucken wollen. Jetzt werden die ver-
+      schiedenen Teile des Plans gedruckt. Wenn alle Teile gedruckt sind, er-
+      scheint das Hauptmenue. 
+      Angaben wie Tren und Monster werden auf diesem Plan nicht gedruckt.
+
+    Gamesmasterplan drucken : 
+      Die Bedienung erfolgt wie bei "Spielplan drucken". Der Unterschied be-
+      steht darin, das ein verkleinerter Plan mit allen Zusatzinformationen wie
+      Tren und Monster ausgedruckt wird. Dieser Plan ist nur fr den Spiellei-
+      ter bestimmt. Wurde ein Infofile angegeben (siehe: "Plan editieren") wird 
+      dieses mit ausgedruckt.
+
+    mit Klebrand : 
+      Wurde diese Funtion angew„hlt (erkennbar an dem H„ckchen) wird beim druck-
+      en des Spielplanes ein Rand mit ausgedruckt, der das Zusammenkleben der 
+      einzelnen Teile des Spielplans erleichtert.
+
+    ENDE : 
+      Beendet das Programm. VORSICHT ! Alle nicht auf Diskette gespeicherten 
+      Speicherb„nke sind danach unwiderbringlich gel”scht.
+
+
+
+Chars editieren :
+-----------------
+Das Programm reserviert drei Speicherb„nke fr Chars. Jede dieser Speicherb„nke 
+kann bis zu 60 Chars umfassen, insgesamt k”nnen also 180 Chars gleichzeitig im 
+Speicher sein. Jeder Char ist 60*60 Pixels gro. 
+Der Bildschirm besteht aus der Menueleiste und einer Box mit dem vergr”erten 
+Char und dem Char in Orginalgr”e.
+
+Die Menueleiste :
+  Desk :
+    Planmaker Info : 
+      Hat denselben Effekt wie im Hauptmenue.
+
+
+  Char :
+    ~ holen : 
+      Sie k”nnen hiermit einen Char von einer Speicherbank holen und ihn editieren.
+      Der Char auf der Speicherbank wird dabei nicht ver„ndert. Gehen sie mit 
+      dem Kasten auf den Char, den sie holen wollen und drcken sie den linken 
+      Mausknopf. Wenn sie oberhalb des Feldes mit den Chars gehen, wird der 
+      Mauspfeil angezeigt. Sie k”nnen jetzt durch drcken des linken Mausknopfes 
+      zur n„chsten Bank umschalten. Wenn sie keinen Char holen wollen drcken 
+      sie den rechten Mausknopfum zum Editor zu kommen.
+      Der Char den sie bearbeiten ist unabh„ngig von dem Char auf der Speicher-
+      bank, d. h. das der Char auf der Speicherbank nicht ge„ndert wird wenn sie 
+      etwas am Char auf dem Bildschirm „ndern.
+
+    ~ speichern : 
+      Mit dieser Option k”nnen sie den Char, den sie editiert haben, auf einer 
+      Speicherbank ablegen. Die Bedienung ist dieselbe wie bei "Char holen". 
+      Sie k”nnen den Char beliebig oft an beliebigen Stellen ablegen. Drcken 
+      sie den rechten Mausknopf um die Option zu beenden.
+      Achten sie darauf, da sie die neuen Chars nicht auf Chars abspeichern, 
+      die sie in einem Plan verwendet haben. In diesem Plan wrden dann die 
+      neuen anstelle der alten Chars gezeichnet.
+
+    ~ l”schen : 
+      Der derzeitige Char wird vom Bildschirm gel”scht.
+
+    ~ invertieren : 
+      Der Char wird invertiert.
+
+  Funktionen : 
+Alle Zeichenfuntionen, die jetzt folgen, arbeiten sowohl auf dem Char in 
+Orginalgr”e als auch auf dem vergr”erten Char. Mit dem linken Mausknopf wird 
+schwarz gezeichnet, mit dem rechten wei.
+    Zeichnen : 
+      Durch Mausklick k”nnen Punkte gesetzt werden.
+
+    Fllen : 
+      Vom Mauspfeil ausgehend wird mit dem gew„hlten Fllmuster gefllt.
+
+    Linien : 
+      Drcken sie einmal den Mausknopf, um den Anfang der Linie zu markieren. 
+      Dadurch wird auch die Linienfarbe festgelegt.  Drcken sie ein zweites  
+      Mal den Mausknopf um das Ende der Linie zu setzen.
+
+    Rechteck : 
+      Drcken sie den Mausknopf um die linke obere Ecke des Rechtecks festzu-
+      legen,  gehen sie zur rechten unteren Ecke und drcken sie den Mausknopf
+      noch einmal.  Chars fr Spielpl„ne sollten sie mit einem  Rechteck um-
+      rahmen,  damit sie auf dem Plan die  einzelnen Felder unterscheiden
+      k”nnen.
+
+    Kreis : 
+      Drcken sie den Mausknopf um den Kreismittelpunkt zu markieren. Bewegen  
+      sie  die  Maus  nach links und  rechts  um  den  Radius festzulegen und
+      drcken sie einen Mausknopf.
+
+    Ellipse  :  
+      Drcken  sie den Mausknopf um den  Mittelpunkt  zu  markieren. Bewegen 
+      sie die Maus nach links,  rechts,  oben,  unten um die Radien festzule-
+      gen.
+
+    Fllmuster aussuchen : 
+      Sie k”nnen sich ein Fllmuster durch Anklicken anw„hlen.
+
+    Fllmuster editieren : 
+      Erlaubt es, sich ihr eigenes Fllmuster zu entwerfen. Mit dem linken und 
+      rechten Mausknopf k”nnen sie im vergr”erten Bereich Punkte setzen und 
+      l”schen. Im Feld rechts oben ist das Fllmuster in Orginalgr”e zu sehen.
+      Wenn sie auf den Kasten darunter klicken wird dieser mit ihrem Fllmuster
+      gefllt. Klicken Sie auf das Feld "Zurck" um zum Editor zurckzukommen.
+      Sie k”nnen ihr Fllmuster bei "Fllmuster aussuchen" anw„hlen.
+
+
+  Specials:
+    Verschieben :
+      Suchen sie sich durch Eingabe von "O","U","L","R" (oben, unten, links, 
+      rechts) die Richtung aus, in die sie den Char verschieben wollen. Dann 
+      geben sie die Anzahl der Pixels ein, um die verschoben werden soll.
+
+    Drehen :
+      Die Drehrichtung bestimmen sie durch Eingabe von "I","G" (Im/Gegen den 
+      Uhrzeigersinn). Der Char wird in die angegebene Richtung um 90ø gedreht.
+
+    Spiegeln :
+      Spieget den Char durch Eingabe von "X","Y" an der X- Oder Y-Achse.
+
+Die drei zuletzt genannten Funtionen eignen sich hervorragend, um aus schon 
+bestehenden Chars neue Chars zu machen. R„ume, die mit einem "normalen" und 
+einem gedrehten Char gestaltet sind, sehen sehr gut aus (s. auch die auf der 
+Diskette vorhandenen Demopl„ne.)
+
+    Spray :
+      Es sieht oft gut aus, wenn auf einem Char zuf„llig Pixels gezeichnet 
+      sind. Diese Funktion bernimmt diese Aufgabe fr sie. Geben sie die An-
+      zahl der Pixels ein, die gesetzt werden sollen. Sie k”nnen jetzt im Feld 
+      rechts oben das Char mit den gesetzten Pixels sehen. Wenn es ihnen 
+      gef„llt, drcken sie "J" und der Char wird bernommen. Drcken sie "N" 
+      wird der ursprngliche Char wieder an die Stelle des neuen gezeichnet.
+
+    Grab Char : 
+      Diese Funtion erm”glicht es ihnen, Ausschnitte von monochromen Bildern 
+      als Chars zu bernehmen. W„hlen sie in der Fileselectbox das Bild an (es 
+      mu im Doodle-Format vorliegen), gehen sie mit dem Kasten auf den Aus-
+      schnitt, den sie bernehmen wollen, und drcken sie den linken Mausknopf.
+      Drcken sie den rechten Mausknopf, wenn sie keinen Ausschnitt holen wol-
+      len.
+      
+    Zum Hauptmenue :
+      Sie kommen zurck zum Hauptmenue. Der Char den sie am editieren sind, 
+      wird nicht gel”scht.
+
+
+Der Planeditor :
+----------------
+Der Planeditor bietet eine umfangreiche Auswahl an Funktionen, um ihre Spiel-
+pl„ne so stimmungsvoll wie m”glich zu gestalten. Ein Plan kann bis zu 80x50 
+Felder gro sein (das w„ren ausgedruckt ca. 1,60x1 Meter) und es k”nnen bis zu 
+5 Pl„ne gleichzeitig im Speicher sein.
+
+Die Benutzeroberfl„che besteht aus einer Menuezeile, links einer Box mit ver-
+schiedenen Funktionen, die sp„ter noch erkl„rt werden, den vier Scrollpfeilen 
+und das Feld, in dem der Plan editiert wird.
+
+In der Box links ist oben der aktuelle Char angezeigt, der gesetzt wird, wenn 
+die Option "Char 1 setzen/Char 2 setzen" angew„hlt ist. Darunter sind zwei 
+Chars angegeben, die sie durch anklicken als aktuellen Char anw„hlen k”nnen. 
+Mit den Pfeilen oberhalb und unterhalb dieser Chars k”nnen sie durch anklicken 
+durch die Speicherb„nke scrollen um so beliebige Chars als aktuelle Chars zu 
+bernehmen.
+Wenn sie sich in dem Editorfeld befinden, k”nnen sie durch drcken des rechten 
+Mausknopfes Informationen ber dieses Feld abrufen. Diese werden links unten
+angezeigt. Ein -1 steht dafr, da kein Char gesetzt ist. Bei der Anzeige fr 
+die Ausg„nge steht die obere Zeile fr normale, die untere Zeile fr geheime 
+Ausg„nge.
+
+Wenn sie sich im Editorfeld befinden wird der Mauspfeil ausgeschaltet und ein 
+quadratischer Cursor erscheint. Unterhalb des oberen Scrollpfeils ist die 
+Position des Cursors auf dem Spielplan und die Bank auf die der Spielplan ge-
+speichert wird angezeigt. Der Spielplan geht in X-Richtung von 0-79, in Y-Rich-
+tung von 0-49.
+Durch anklicken der Scrollpfeile scrollen sie den Plan in die entsprechende
+Richtung.
+
+
+Die Menueleiste :
+-----------------
+Wenn sie mit der Maus in die Menueleiste gehen, wird diese invertiert darge-
+stellt. Dies hat den Sinn, da man manchmal in die Menueleiste kommt, ohne es 
+zu bemerken und sich dann wundert wenn keine Funktion mehr funktioniert. Wenn 
+sie in die Menueleiste kommen, mssen sie einen Menuepunkt anw„hlen, bevor sie
+weitermachen k”nnen (mein Wissen ber GEM-Programmierung beschr„nkt sich auf 
+das, was im OMIKRON-Handbuch steht, und da steht halt nicht, wie man die 
+Prozedur Evnt_Mesag beendet, ohne einen Menuepunkt anzuw„hlen.)
+
+  Desk :
+    Planmaker Info :
+      Hat denselben Effekt wie im Hauptmenue.
+
+  Modus :
+  S„mtliche folgende Funktionen werden durch Mausklick im Editorfeld aktiviert 
+  und beziehen sich auf das Feld auf dem sie sich gerade befinden.
+    Char 1 setzen/Char 2 setzen : 
+      Sie k”nnen auf dasselbe Feld zwei verschiedene Chars setzen. Diese werden
+      bereinandergezeichnet. Es ist so m”glich, gleiche Chars individueller zu 
+      gestalten. Einige Chars auf dieser Diskette sind extra zu diesem Zweck 
+      gezeichnet.
+
+    Ausg„nge setzen :
+      Wenn sie diese Funktion aktivieren, werden sie zuerst gefragt, ob sie 
+      einen normalen oder ein geheimen Ausgang setzen wollen. Diese werden auf
+      dem Bildschirm und dem Gamesmasterplan verschieden dargestellt. Dann ge-
+      ben sie die Himmelsrichtung ein, wo sie den Ausgang setzen wollen, wobei 
+      Norden auf dem Bildschirm oben ist (wie ungew”hnlich). Wenn sie auf einem
+      Char im Norden einen Ausgang setzen wird automatisch auch auf dem Char 
+      darber ein Ausgang im Sden gesetzt. Um Ausg„nge zu l”schen, setzen sie 
+      einfach noch einmal einen Ausgang an diese Stelle.
+
+    W„nde setzen :
+      Geben sie die Himmelsrichtung ein, in der sie die Wand setzen wollen.
+      Auch hier gilt : wenn sie im Norden eine Wand setzen, wird auf dem da-
+      rberliegenden Char im Sden eine Wand gezeichnet. Um W„nde zu l”schen,
+      setzen sie an diese Stelle noch eine Wand.
+
+    Ecken setzen :
+      Wenn zwei W„nde im Winkel von 90ø aufeinandertreffen, bleibt immer eine 
+      Ecke frei. Durch diese Funktion k”nnen sie dort die fehlenden Ecken set-
+      zen. Geben sie nach dem anw„hlen die Himmelsrichtung ein, wo die Ecke ge-
+      setzt werden soll ("NW" fr Nordwest u.s.w.). Vergessen sie nicht, die 
+      Ecke wieder zu l”schen, wenn sie dort eine dritte Wand setzen, man sieht 
+      sonst in der Wand einen schwarzen Strich. Das L”schen erfolgt durch set-
+      zen einer Ecke an derselben Stelle.
+
+    Monster setzen :
+      Sie k”nnen mit dieser Funktion einen Buchstaben setzen, der ein Monster 
+      symbolisiert. Dies k”nnen alle Klein- und Grobuchstaben bis auf "E" 
+      sein, welcher die Funktion abbricht. Es ist nicht sinnvoll, fr die Mon-
+      ster ihre Anfangsbuchstaben zu verwenden, besser ist es, mit "A" anzu-
+      fangen und im Infofile (s. sp„ter) zu vermerken, welcher Buchstabe fr 
+      welches Monster steht. Sie k”nnen Monster l”schen, indem sie bei der 
+      Eingabe "*" eingeben.
+
+    Infos setzen :
+      Mit dieser Funktion k”nnen sie Zahlen von 1-98 setzen und ihre Bedeutung 
+      im Infofile (s. sp„ter) vermerken. Die Eingabe von "0" bricht die Funktion 
+      ab, die Eingabe von "99" l”scht die Zahl, die sich auf diesem Feld befin-
+      det.
+
+    L”schen :
+      Diese Funktion l”scht alles, was sich auf diesem Feld befindet.
+
+  Funktionen :
+    Kopieren :
+       Eine šbersicht des Plans wird dargestellt. Gehen sie mit der Maus auf 
+       den obersten linken Char den sie kopieren wollen, drcken und halten sie
+       den linken Mausknopf und gehen sie zum untersten rechten Char. Wenn sie 
+       jetzt den Mausknopf loslassen, bewegen sie ein Rechteck von der Gr”e 
+       des Bereichs, den sie kopieren wollen. Bewegen sie es an die Stelle, wo 
+       sie ihn haben wollen und drcken sie den Mausknopf.
+    
+    Replace :
+       Diese Funktion dient dazu, Chars in gr”erem Umfang durch andere zu er-
+       setzen, ohne jedes Char einzeln anzuklicken. Geben sie zuerst die Nummer 
+       und die Bank des Chars an, den sie ersetzen wollen, dann die Nummer und 
+       die Bank des Chars, durch den sie den Char ersetzen wollen. Jetzt wird 
+       eine šbersicht des Plans gezeichnet, auf dem alle Felder mit den Chars, 
+       die sie ersetzen wollen, durch ein Kreuz gekennzeichnet sind. Suchen sie 
+       sich jetzt wie bei "Kopieren" den Bereich aus, in dem die Chars ausge-
+       tauscht werden sollen.
+
+    L”schen :
+       Sie k”nnen Bereiche von dem Plan l”schen. Suchen sie sich wie bei "Ko-
+       pieren" den Bereich aus, den sie l”schen wollen.
+       Wenn sie nichts l”schen wollen, drcken sie den rechten Mausknopf.
+
+    Char aussuchen :
+       Erm”glicht es, einen Char direkt von einer Speicherbank als aktuellen 
+       Char anzuw„hlen. Die Bedienung funktioniert wie bei "Char holen" im
+       Chareditor (siehe dort).
+
+    šbersicht :
+       Der Plan wird als verkleinerte šbersicht angezeigt. Ein Quadrat steht 
+       fr einen gesetzten Char. Um die Darstellung zu beschleunigen, werden
+       nur dort W„nde etc. angezeigt, wo ein Char gesetzt ist. Drcken sie
+       einen Mausknopf um die Anzeige zu verlassen.
+
+    Bank aussuchen :
+       Klicken sie so lange auf "Weiter" und "Zurck", bis sie die Bank er-
+       reicht haben, die sie anw„hlen wollen, und klicken sie dann auf "Ende" 
+       um auf dieser Bank zu arbeiten.
+
+    Stelle „ndern :
+       Suchen sie sich mit dem Kasten die Stelle aus, an der sie auf dem Plan 
+       weiterarbeiten m”chten und drcken sie den linken Mausknopf. Drcken
+       sie den rechten Mausknopf wenn sie die Stelle nicht ver„ndern m”chten.
+
+    Infofile :
+       Das Infofile ist eine Textdatei, die sie mit einem beliebigen Texteditor
+       schreiben k”nnen. In ihr sollten alle Informationen stehen, die fr 
+       das Level wichtig sind und die nur der Spielfhrer wissen darf. Wenn sie 
+       mit diesem Menuepunkt eine solche Textdatei anw„hlen, wird diese auto-
+       matisch ausgedruckt, wenn sie den Gamesmasterplan drucken. Sie mssen
+       nicht unbedingt ein Infofile angeben.
+
+    Zum Hauptmenue :
+       Sie kehren zum Hauptmenue zurck.
+
+
+Das war's, jetzt sollten eigentlich alle Fragen gekl„rt sein. Wenn sie noch 
+irgendwelche Probleme, Anregungen oder Verbesserungsvorschl„ge haben sollten,
+schreiben sie mir.
+Meine Adresse :
+
+     Michael Koch
+     Waldbachstrae 12
+     5430 Montabaur 1
+
+Noch ein paar Tips :
+Sie sollten nicht fr jedes Level einen neuen Spielplan drucken. Das strapa-
+ziert Farbband und Druckkopf und macht viel Arbeit. Sie sollten vielmehr groe 
+Spielpl„ne drucken, auf denen sie viele verschiedene Abenteuer spielen k”nnen.
+Der Planmaker bietet keine M”glichkeit, M”bel usw. in den Spielplan einzuzeich-
+nen. Diese k”nnen sie dann noch nachtr„glich in den Gamesmasterplan einzeichnen 
+und dann die M”bel aus Hero Quest verwenden, oder Sie zeichnen sich Chars, auf 
+denen die M”bel von oben zu sehen sind.
+Um die einzelnen ausgedrucken Teile des Spielplans auszuschneiden, haben sich 
+am besten ein Scharfer Cutter oder ein Teppichmesser (Vorsicht, scharf !) 
+und ein langes Lineal bew„hrt. Das geht schnell und man bekommt saubere 
+Schnittkanten.
+
+
+Ich arbeite im Moment an einer verbesserten Version. Diese wird u. a. folgende 
+Verbesserungen enthalten :
+            - Eine verbesserte Benutzerfhrung im Bereich des Planeditors
+            - Zwei Aufl”sungen beim Arbeiten am Plan. (die normale und eine, 
+              bei der die Chars nur halb so gro dargestellt werden)
+            - Ein erweiterter Funktionsumfang
+            - Die Pl„ne werden "Am laufenden Meter" bannerartig ausgedruckt, 
+              was einem viel Schnippel- und Klebarbeit erspart
+            - und was noch so anf„llt. Schreiben sie mir, wenn sie noch Ideen
+              haben
+
+Wenn sie Interesse daran haben sollten, schicken sie mir eine Diskette und das 
+Rckporto (und, wenn sie Geld zuviel haben sollten, noch einen kleinen Aner-
+kennungsbetrag fr die viele Arbeit, ich wrde mich freuen). Wenn sie dann noch 
+ihre eigenen Chars und Spielpl„ne auf die Diskette draufkopieren, kann ich eine 
+Sammlung davon gleich mitverschicken. Ich werde ihnen so bald wie m”glich die 
+neueste Version des Planmakers zuschicken.
+

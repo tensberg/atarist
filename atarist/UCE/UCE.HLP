@@ -1,0 +1,57 @@
+' Diese Datei enthÑlt die Hilfstexte fÅr das UCE-Wîrterbuch
+
+:INDEX
+UCE
+WôRTERBUCH
+$WOERTERBUCH
+EINSTELLUNGEN
+FENSTER AUF BYTEGRENZE LEGEN
+CURSOR BLINKT
+SICHERN
+SICHERN UNTER
+
+:UCE
+Der Ultimate C Editor ist ein speziell fÅr C-Quelltexte
+konzipierter Texteditor.
+Autor : Michael Koch
+Mehr Info in der Anleitung!
+
+:WôRTERBUCH
+Im Wîrterbuch kînnen sie wichtige Begriffe zur Bedienung
+des UCE und rund um die Programmierung der ATARI-Computer
+nachschlagen. Geben sie ein Stichwort ein und klicken sie
+<suchen>, um das Stichwort nachzuschlagen.
+Wenn sie als Stichwort 'INDEX' eingeben werden sÑmtliche
+Stichwîrter angezeigt, die das Wîrterbuch enthÑlt.
+
+:EINSTELLUNGEN
+Hier stellen sie wichtige Grundfunktionen fÅr die Steuerung
+des UCE ein.
+Zur Funktion der einzelnen Auswahlmîglichkeiten siehe :
+'GROW/SHRINKBOXEN'
+'FENSTER AUF BYTEGRENZE LEGEN'
+'DIALOGE AN MAUSPOSITION'
+'CURSOR BLINKT'
+'WARNTON BEI FEHLERN'
+'*.INF FöR QUELLTEXTE SPEICHERN'
+'ALTE DATEIEN IN *.BAK UMBENENNEN'
+
+:FENSTER AUF BYTEGRENZE LEGEN
+Wenn sie diese Checkbox selektiert haben werden beim
+Verschieben von Fenstern die Fensterkoordinaten so
+berechnet, das die Position des Fensterinhalts auf einer
+Bytegrenze liegt. Das beschleunigt vor allem bei ST's den
+Bildschirmaufbau.
+
+:CURSOR BLINKT
+Wenn sie diese Checkbox selektiert haben, wird der Cursor
+in Textfenstern blinken.
+
+:SICHERN
+Der Text, den sie gerade bearbeiten wird unter dem aktu-
+ellen Dateinamen abgespeichert.
+
+:SICHERN UNTER
+Der Text, den sie gerade bearbeiten, wird unter einem 
+neuen Dateinamen gespeichert, den sie sich in einer Datei-
+auswahlbox aussuchen knnen.
