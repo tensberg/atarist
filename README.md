@@ -27,15 +27,15 @@ Plots a mathematical function as 3 dimensional graph. Like many of the other pro
 
 ## Fracrand
 
-Traces the border of the [mandelbrot set](http://en.wikipedia.org/wiki/Mandelbrot_set) along the boundary.
-
 [FRACRAND.BAS](sources/FRACRAND.BAS)
+
+Traces the border of the [mandelbrot set](http://en.wikipedia.org/wiki/Mandelbrot_set) along the boundary.
 
 ![FRACRAND](media/FRACRAND.png)
 
-## Fractal
+## Mandeldraw
 
-Draws colorized pictures of the mandelbrot set. Fractals sure were popular at the time.
+Draws colorized pictures of the mandelbrot set. Fractals sure were popular at the time. CSC is the _Cook Soft Company_, by the way, the name under which I wanted to publish my software.
 
 [FRACTAL.BAS](sources/FRACTAL.BAS)
 
@@ -45,7 +45,7 @@ Draws colorized pictures of the mandelbrot set. Fractals sure were popular at th
 
 ![FRACTAL_TITEL](media/FRACTAL_TITEL.png)
 
-## Fraktalsee
+## Fraktallandschaften
 
 Draws the mandelbrot set as a 3D picture, creating the effect of a landscape. This is adapted from a listing in Happy Computer.
 
@@ -57,7 +57,7 @@ Draws the mandelbrot set as a 3D picture, creating the effect of a landscape. Th
 
 ![FRACSEE_TITEL](media/FRACSEE_TITEL.png)
 
-## Funktionsplotter
+## Funktionenzeichner
 
 [FUNKTION.BAS](sources/FUNKTION.BAS)
 
@@ -87,11 +87,13 @@ Converts a 16 color image to black and white by applying a dithering algorithm. 
 
 [READMEMA.BAS](sources/READMEMA.BAS)
 
-![READMEMAKER_FEHLER](media/READMEMAKER_FEHLER.png)
+![READMEMAKER_TITEL](media/READMEMAKER_TITEL.png)
 
 ![READMEMAKER_HILFE](media/READMEMAKER_HILFE.png)
 
-![READMEMAKER_TITEL](media/READMEMAKER_TITEL.png)
+![READMEMAKER_FEHLER](media/READMEMAKER_FEHLER.png)
+
+_"Even a perfect program still has bugs.", The Tao of Programming_
 
 ## Core Wars / Krieg der Kerne
 
@@ -137,11 +139,11 @@ Converts a 16 color image to black and white by applying a dithering algorithm. 
 
 ![RUNNING_POINTS_GAME](media/RUNNING_POINTS_GAME.png)
 
-## Wörterbuch
+## Minidic
 
 [sources](atarist/WOERTER/)
 
-What does a programmer do if he wants to learn a foreign language? He writes a language learning program. _Wörterbuch_ is a vocabulary trainer. This is one of my first C programs. Having to reload everything from floppy disk when your C program crashes the operating system really teaches you to make no mistakes.
+What does a programmer do if he wants to learn a foreign language? He writes a language learning program. _Minidic_ is a dictionary and vocabulary trainer. This is one of my first C programs. Having to reload everything from floppy disk when your C program crashes the operating system really teaches you to make no mistakes.
 
 My later, more elaborate language learning program is [JGloss](http://jgloss.sf.net/).
 
