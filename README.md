@@ -39,11 +39,11 @@ Draws colorized pictures of the mandelbrot set. Fractals sure were popular at th
 
 [FRACTAL.BAS](sources/FRACTAL.BAS)
 
+![FRACTAL_TITEL](media/FRACTAL_TITEL.png)
+
 ![FRACTAL_MENU](media/FRACTAL_MENU.png)
 
 ![FRACTAL_PICTURE](media/FRACTAL_PICTURE.png)
-
-![FRACTAL_TITEL](media/FRACTAL_TITEL.png)
 
 ## Fraktallandschaften
 
@@ -87,7 +87,7 @@ Prints an image (no surprise here). Printing bitmaps at the time meant writing t
 
 Prints an image scaled to poster size.
 
-## Readmemaker
+## Readmem-Maker
 
 [READMEMA.BAS](sources/READMEMA.BAS)
 
@@ -125,7 +125,7 @@ A 3D animation software. You can draw polygons and then animate them by applying
 
 ![CSCANIMA_EDIT](media/CSCANIMA_EDIT.png)
 
-![Demo Video](https://www.youtube.com/watch?v=kdeKgEstNao)
+[Demo Video](https://www.youtube.com/watch?v=kdeKgEstNao)
 
 ## Planmaker
 
@@ -157,7 +157,7 @@ A Tron clone with extras, level editor and computer players.
 
 ![RUNNING_POINTS_GAME](media/RUNNING_POINTS_GAME.png)
 
-![Demo Video](https://www.youtube.com/watch?v=fhKZ_MPWtLQ)
+[Demo Video](https://www.youtube.com/watch?v=fhKZ_MPWtLQ)
 
 ## Minidic
 
