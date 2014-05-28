@@ -127,6 +127,20 @@ A 3D animation software. You can draw polygons and then animate them by applying
 
 [Demo Video](https://www.youtube.com/watch?v=kdeKgEstNao)
 
+## Running Points
+
+[R_POINTS.BAS](sources/R_POINTS.BAS) | [README](atarist/R_POINTS/R_POINTS.TXT)
+
+A Tron clone with extras, level editor and computer players.
+
+![RUNNING_POINTS_TITLE](media/RUNNING_POINTS_TITLE.png)
+
+![RUNNING_POINTS_OPTIONS](media/RUNNING_POINTS_OPTIONS.png)
+
+![RUNNING_POINTS_GAME](media/RUNNING_POINTS_GAME.png)
+
+[Demo Video](https://www.youtube.com/watch?v=fhKZ_MPWtLQ)
+
 ## Planmaker
 
 [PLANMAKE.BAS](sources/PLANMAKE.BAS) | [README](atarist/PLANMAKE.R/DATAS/PRGDATAS/PLANMAKE.TXT)
@@ -144,20 +158,6 @@ As with most of my programs, writing it was far more interesting than actually u
 ![PLANMAKER_CHARS](media/PLANMAKER_CHARS.png)
 
 ![PLANMAKER_PRINT](media/PLANMAKER_PRINT.png)
-
-## Running Points
-
-[R_POINTS.BAS](sources/R_POINTS.BAS) | [README](atarist/R_POINTS/R_POINTS.TXT)
-
-A Tron clone with extras, level editor and computer players.
-
-![RUNNING_POINTS_TITLE](media/RUNNING_POINTS_TITLE.png)
-
-![RUNNING_POINTS_OPTIONS](media/RUNNING_POINTS_OPTIONS.png)
-
-![RUNNING_POINTS_GAME](media/RUNNING_POINTS_GAME.png)
-
-[Demo Video](https://www.youtube.com/watch?v=fhKZ_MPWtLQ)
 
 ## Minidic
 
